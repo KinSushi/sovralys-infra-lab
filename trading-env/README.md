@@ -18,6 +18,24 @@ MetaTrader 5 running 24/7 in the Windows VM as MASTER node, with the local PC ac
         +--► Optimization speed x3 to x6
 ```
 
+MetaTrader 5 running 24/7 in the Windows VM as MASTER node, with the local PC acting as distributed worker farm via Tailscale.
+
+---
+
+## Architecture
+
+```
+[Windows VM — MT5 MASTER]
+  Local agents: 4-8 cores
+        |
+        | Tailscale VPN (100.G.H.I)
+        |
+[Local PC — MT5 WORKERS]
+  Remote agents: additional cores
+        |
+        +--► Optimization speed x3 to x6
+```
+
 The VM always runs as MASTER (launches optimizations, stores results). The local PC acts as a worker farm via Tailscale.
 
 ---
@@ -95,9 +113,21 @@ Typical gain with this method: >80% reduction in total optimization time.
 
 Individual EAs don't win durably — intelligent diversification across EAs does.
 
-Professional structure: 5 to 15 EAs, average correlation < 0.4, portfolio Sharpe Ratio target > 1.5.
+**Portfolio structure targets:**
+- 5 to 15 EAs running simultaneously
+- Average inter-EA correlation < 0.4
+- Portfolio Sharpe Ratio target > 1.5
 
-Diversification types: strategy (trend following, mean reversion, breakout), timeframe (M1 → D1), market (forex, indices, commodities), entry logic.
+**4 diversification axes:**
+
+| Axis | Examples |
+|---|---|
+| Strategy | Trend following, mean reversion, breakout, carry |
+| Timeframe | M1, M5, M15, H1, H4, D1 — never concentrate on a single TF |
+| Market | Forex pairs, indices (NAS100, SPX500), commodities (XAUUSD, XAGUSD) |
+| Entry logic | Price action, indicator-based, statistical, order flow |
+
+> Correlation < 0.4 between EAs means drawdowns don't overlap. A portfolio of 10 low-correlation EAs with individual Sharpe 0.8 can produce a portfolio Sharpe > 1.5 through diversification alone.
 
 ---
 
