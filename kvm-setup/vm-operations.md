@@ -9,6 +9,16 @@ Daily reference for managing the Windows 10 VM.
 ```bash
 sudo virsh list --all
 sudo virsh start windows10
+
+Daily reference for managing the Windows 10 VM.
+
+---
+
+## VM State Management
+
+```bash
+sudo virsh list --all
+sudo virsh start windows10
 sudo virsh shutdown windows10    # graceful shutdown (preferred)
 sudo virsh destroy windows10     # force stop (frozen VM only)
 sudo virsh reboot windows10
@@ -29,14 +39,24 @@ sudo virsh start windows10
 sudo virsh dominfo windows10 | grep memory
 ```
 
-**CPU topology — 8 cores:**
+**CPU topology — 8 cores (via virsh edit):**
 ```bash
 sudo virsh shutdown windows10
-sudo virsh dumpxml windows10 > /home/$USER/windows10.xml
-sudo sed -i 's/<cpu mode="host-passthrough".*\/>/<cpu mode="host-passthrough" check="none" migratable="on"><topology sockets="1" cores="8" threads="1"\/><\/cpu>/' /home/$USER/windows10.xml
-sudo virsh define /home/$USER/windows10.xml
+# Wait for shutdown
+watch -n2 'virsh list --all'   # Ctrl+C when: shut off
+
+sudo virsh edit windows10
+# In the XML editor, find the <cpu> block and replace it with:
+# <cpu mode="host-passthrough" check="none" migratable="on">
+#   <topology sockets="1" cores="8" threads="1"/>
+# </cpu>
+# Save and exit (:wq in vi)
+
 sudo virsh start windows10
+sudo virsh vcpuinfo windows10   # Verify
 ```
+
+> Note: `virsh edit` opens the XML in `$EDITOR` (default: vi). To use nano: `EDITOR=nano sudo virsh edit windows10`
 
 ---
 
