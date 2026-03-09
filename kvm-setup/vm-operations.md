@@ -9,16 +9,6 @@ Daily reference for managing the Windows 10 VM.
 ```bash
 sudo virsh list --all
 sudo virsh start windows10
-
-Daily reference for managing the Windows 10 VM.
-
----
-
-## VM State Management
-
-```bash
-sudo virsh list --all
-sudo virsh start windows10
 sudo virsh shutdown windows10    # graceful shutdown (preferred)
 sudo virsh destroy windows10     # force stop (frozen VM only)
 sudo virsh reboot windows10
