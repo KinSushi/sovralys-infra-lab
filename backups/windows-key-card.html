@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows License Card — SOVRALYS Infra</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0f;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: #0f1117;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 600px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0, 120, 212, 0.15);
+    }
+    .card-header {
+      background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .windows-logo {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+    .windows-logo div {
+      background: white;
+      border-radius: 1px;
+    }
+    .header-text h1 {
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+    .header-text p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 2px;
+    }
+    .status-badge {
+      margin-left: auto;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 11px;
+      color: #7ec8e3;
+    }
+    .card-body {
+      padding: 24px;
+    }
+    .field {
+      margin-bottom: 16px;
+    }
+    .field label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #4a9eff;
+      margin-bottom: 6px;
+    }
+    .field input {
+      width: 100%;
+      background: #1a1d26;
+      border: 1px solid #2a3a5c;
+      border-radius: 4px;
+      padding: 10px 14px;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field input:focus {
+      border-color: #0078d4;
+      background: #1e2233;
+    }
+    .field input::placeholder {
+      color: #3a4a6a;
+      font-style: italic;
+    }
+    .product-key-field input {
+      letter-spacing: 3px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #7ec8e3;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #1e2a3a;
+      margin: 20px 0;
+    }
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .card-footer {
+      background: #080c12;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #1e2a3a;
+    }
+    .footer-note {
+      font-size: 10px;
+      color: #2a4a6a;
+    }
+    .footer-tag {
+      font-size: 10px;
+      color: #1e3a5f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .warning-banner {
+      background: rgba(255, 160, 0, 0.08);
+      border: 1px solid rgba(255, 160, 0, 0.2);
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin-bottom: 20px;
+      font-size: 11px;
+      color: #ffa500;
+    }
+    .warning-banner strong {
+      color: #ffcc44;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="windows-logo">
+        <div></div><div></div><div></div><div></div>
+      </div>
+      <div class="header-text">
+        <h1>Windows 10 Pro — License Card</h1>
+        <p>SOVRALYS Infrastructure · KVM/QEMU VM</p>
+      </div>
+      <div class="status-badge">KEEP PRIVATE</div>
+    </div>
+
+    <div class="card-body">
+      <div class="warning-banner">
+        <strong>⚠ Do not commit with real values filled in.</strong>
+        Fill this card locally and store it offline or in a password manager.
+      </div>
+
+      <div class="field product-key-field">
+        <label>Product Key</label>
+        <input type="text" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" maxlength="29">
+      </div>
+
+      <hr class="divider">
+
+      <div class="row-2">
+        <div class="field">
+          <label>Host / Device</label>
+          <input type="text" placeholder="OVH KVM VM">
+        </div>
+        <div class="field">
+          <label>License Type</label>
+          <input type="text" placeholder="Retail / OEM / Volume">
+        </div>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label>Owner / Account</label>
+          <input type="text" placeholder="$WIN_USER">
+        </div>
+        <div class="field">
+          <label>Activation Channel</label>
+          <input type="text" placeholder="Online / Phone / MAK">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Notes</label>
+        <input type="text" placeholder="e.g. License tied to VM UUID — reactivates automatically on restore">
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span class="footer-note">sovralys-infra-lab / backups / windows-key-card.html</span>
+      <span class="footer-tag">SOVRALYS LLC</span>
+    </div>
+  </div>
+</body>
+</html>
