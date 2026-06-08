@@ -2,6 +2,10 @@
 
 <div align="center">
 
+<img src="assets/infra-lab-banner.svg" alt="sovralys-infra-lab banner" width="100%"/>
+
+<br/>
+
 **Personal Data / ML Infrastructure Lab**
 
 Ubuntu host · KVM/QEMU VM · Private networking · Docker/Jupyter separation · Recovery procedures · Operational documentation
