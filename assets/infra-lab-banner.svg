@@ -1,0 +1,31 @@
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sovralys infrastructure lab banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06111F"/>
+      <stop offset="1" stop-color="#12355B"/>
+    </linearGradient>
+    <style>
+      .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:46px;font-weight:750;fill:#fff}
+      .sub{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:22px;fill:#D8E2F0}
+      .chip{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:14px;font-weight:650;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1280" height="320" rx="26" fill="url(#bg)"/>
+  <g opacity=".28" stroke="#58A6FF" stroke-width="2">
+    <rect x="840" y="60" width="110" height="70" rx="12"/>
+    <rect x="990" y="60" width="110" height="70" rx="12"/>
+    <rect x="915" y="180" width="110" height="70" rx="12"/>
+    <path d="M950 95 H990"/>
+    <path d="M895 130 L970 180"/>
+    <path d="M1045 130 L970 180"/>
+  </g>
+  <text x="74" y="108" class="title">sovralys-infra-lab</text>
+  <text x="74" y="154" class="sub">Personal Data / ML Infrastructure Lab</text>
+  <text x="74" y="192" class="sub">Ubuntu · KVM/QEMU · Private Networking · Docker · Jupyter · Runbooks</text>
+  <rect x="74" y="232" width="134" height="36" rx="18" fill="#0D419D"/>
+  <text x="100" y="255" class="chip">Linux Ops</text>
+  <rect x="224" y="232" width="136" height="36" rx="18" fill="#1A7F37"/>
+  <text x="250" y="255" class="chip">Data Runtime</text>
+  <rect x="376" y="232" width="154" height="36" rx="18" fill="#6E40C9"/>
+  <text x="402" y="255" class="chip">Recovery Docs</text>
+</svg>
