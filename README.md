@@ -39,6 +39,7 @@ The repository is both:
 | [ROADMAP.md](ROADMAP.md) | Data/MLOps-oriented improvement plan |
 | [SECURITY.md](SECURITY.md) | Public documentation and secret-hygiene rules |
 | [docs/OPERATIONS_RUNBOOK.md](docs/OPERATIONS_RUNBOOK.md) | Daily checks, service recovery, VM recovery and incident note template |
+| [docs/DATA_MLOPS_RUNTIME_STACK.md](docs/DATA_MLOPS_RUNTIME_STACK.md) | How the lab supports future DataOps, MLOps, SQL, MLflow, FastAPI and RAG workloads |
 | [docs/ADR-001-host-vm-separation.md](docs/ADR-001-host-vm-separation.md) | Architecture decision record for Ubuntu host / Windows VM separation |
 
 ---
@@ -149,6 +150,7 @@ sovralys-infra-lab/
 |
 |-- docs/
 |   |-- OPERATIONS_RUNBOOK.md
+|   |-- DATA_MLOPS_RUNTIME_STACK.md
 |   +-- ADR-001-host-vm-separation.md
 |
 |-- .github/
