@@ -1,0 +1,64 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.ppk
+*.crt
+*.csr
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+credentials.json
+token.json
+token.pickle
+*.kdbx
+secrets/
+private/
+licenses/
+
+# Backups and local exports
+backups/*.zip
+backups/*.7z
+backups/*.tar
+backups/*.tar.gz
+backups/*.img
+backups/*.qcow2
+backups/*.vhd
+backups/*.vhdx
+*.bak
+*.backup
+*.dump
+*.sql.gz
+
+# Logs and runtime files
+*.log
+logs/
+*.pid
+*.sock
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Terraform / IaC local state
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars
+
+# OS / editor
+.vscode/settings.json
+.idea/
