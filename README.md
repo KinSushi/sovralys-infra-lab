@@ -12,6 +12,7 @@ Ubuntu host · KVM/QEMU VM · Private networking · Docker/Jupyter separation ·
 ![Docker](https://img.shields.io/badge/Docker-Host%20Only-2496ED?style=flat&logo=docker&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Data%20Science-F37626?style=flat&logo=jupyter&logoColor=white)
 ![Windows VM](https://img.shields.io/badge/Windows-VM%20Workload-0078D6?style=flat&logo=windows&logoColor=white)
+![Security](https://img.shields.io/badge/Public%20Docs-Sanitized-2EA043?style=flat)
 
 </div>
 
@@ -27,6 +28,18 @@ The repository is both:
 
 1. an operational survival reference for maintaining the environment;
 2. a public portfolio artifact demonstrating Linux, virtualization, networking, documentation and incident-recovery skills.
+
+---
+
+## Documentation index
+
+| Document | Purpose |
+|---|---|
+| [PORTFOLIO.md](PORTFOLIO.md) | Recruiter-facing explanation of what this repo proves |
+| [ROADMAP.md](ROADMAP.md) | Data/MLOps-oriented improvement plan |
+| [SECURITY.md](SECURITY.md) | Public documentation and secret-hygiene rules |
+| [docs/OPERATIONS_RUNBOOK.md](docs/OPERATIONS_RUNBOOK.md) | Daily checks, service recovery, VM recovery and incident note template |
+| [docs/ADR-001-host-vm-separation.md](docs/ADR-001-host-vm-separation.md) | Architecture decision record for Ubuntu host / Windows VM separation |
 
 ---
 
@@ -129,6 +142,15 @@ sudo ufw status verbose
 sovralys-infra-lab/
 |
 |-- README.md
+|-- PORTFOLIO.md
+|-- ROADMAP.md
+|-- SECURITY.md
+|-- .gitignore
+|
+|-- docs/
+|   |-- OPERATIONS_RUNBOOK.md
+|   +-- ADR-001-host-vm-separation.md
+|
 |-- .github/
 |   +-- CONTRIBUTING.md
 |
