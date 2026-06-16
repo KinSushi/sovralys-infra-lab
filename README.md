@@ -67,26 +67,20 @@ This lab is therefore part of the Data/MLOps path: it shows operational maturity
 
 ## Architecture
 
-```text
-[Local PC — Windows]
-        |
-        | Private Tailscale VPN mesh
-        |
-[OVH Dedicated Server — Ubuntu 24.04 Host]
-        |
-        |-- KVM/QEMU virtualization
-        |
-        +-- [Windows 10 Pro VM]
-        |       |-- Windows-only workload tools
-        |       |-- Windows-only desktop and analysis tooling
-        |       |-- Git + VS Code + Office tools
-        |
-        +-- [Ubuntu Host Data/ML Services]
-                |-- Docker / docker-compose
-                |-- Jupyter / Python environment
-                |-- SSH access
-                |-- noVNC service, tunnel-only access
-                |-- backups and recovery procedures
+```mermaid
+flowchart TD
+    PC[Local PC — Windows] -->|Private Tailscale VPN mesh| HOST[OVH Dedicated Server<br/>Ubuntu 24.04 Host]
+    HOST --> KVM[[KVM/QEMU virtualization]]
+    KVM --> WIN[Windows 10 Pro VM]
+    WIN --> W1[Windows-only workload tools]
+    WIN --> W2[Windows-only desktop & analysis tooling]
+    WIN --> W3[Git + VS Code + Office tools]
+    HOST --> SVC[Ubuntu Host Data/ML Services]
+    SVC --> S1[Docker / docker-compose]
+    SVC --> S2[Jupyter / Python environment]
+    SVC --> S3[SSH access]
+    SVC --> S4[noVNC — tunnel-only access]
+    SVC --> S5[backups & recovery procedures]
 ```
 
 No administrative service is designed to be exposed publicly. Access is routed through private networking and SSH tunnels.
