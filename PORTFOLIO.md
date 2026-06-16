@@ -61,7 +61,7 @@ Personal infrastructure lab demonstrating Linux host operations, KVM/QEMU virtua
 
 ## Recruiter-readable positioning
 
-This repository is evidence for junior DataOps, IT Production, Data Engineering and MLOps roles in regulated environments. It shows the ability to operate below the notebook layer: servers, VMs, access patterns, service isolation, failure recovery and technical documentation.
+This repository is evidence for DataOps, IT Production, Data Engineering and MLOps roles in regulated environments. It shows the ability to operate below the notebook layer: servers, VMs, access patterns, service isolation, failure recovery and technical documentation.
 
 ## What this repo proves
 
@@ -81,11 +81,11 @@ This repository is evidence for junior DataOps, IT Production, Data Engineering 
 
 > I have already operated a real Linux host with private access, VM lifecycle management, service checks and incident documentation. That helps me reason about production incidents, logs, failed services and recovery steps.
 
-### For Junior Data Engineer / DataOps
+### For Data Engineer / DataOps
 
 > This repo is the infrastructure layer behind future data projects. It documents where data workloads should run, how services are isolated, and how operational decisions are recorded.
 
-### For Junior MLOps
+### For MLOps
 
 > MLOps depends on reliable runtimes. This lab shows the operational basis for hosting model-serving APIs, Jupyter environments, Docker services and monitored jobs.
 
